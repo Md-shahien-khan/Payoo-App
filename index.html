@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <main class="flex mx-auto mt-20">
+        <div class="mockup-phone border-primary">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-4">
+                <div class="hero bg-blue-100 min-h-screen">
+                    <div class="hero-content flex-col">
+                        <!-- logo -->
+                        <div class="w-3/5">
+                            <div>
+                                <img src="image-logo/payoo.png" alt="">
+                            </div>
+                            <div class="text-center">
+                                <h2 class="text-3xl font-bold text-blue-600">Payoo App</h2>
+                                <p class="text-xl">Welcome to Payoo. <br> An Online Money Finance App</p>
+                            </div>
+                        </div>
+                        <!-- logo end -->
+                <!-- login form start -->
+                      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Username</span>
+                            </label>
+                            <input id="username-input" type="text" placeholder="Enter Username" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Password</span>
+                            </label>
+                            <input id="password-input" type="password" placeholder="Enter your Password" class="input input-bordered" required/>
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="login-btn" class="btn bg-blue-600 rounded-3xl text-white">Login</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                <!-- login form End -->
+              </div>
+            </div>
+          </div>
+    </main>
+
+    <!-- script -->
+    <script src="Javascript-File/login.js"></script>
+</body>
+</html>
