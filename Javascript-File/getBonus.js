@@ -10,6 +10,19 @@ document.getElementById('btn-bonus').addEventListener('click', function(e){
         const bonus = (balance / 100) * 10;
         const newBalance = balance + bonus;
         document.getElementById('account-balance').innerText = newBalance;
+
+
+        // add to transaction history
+        const p = document.createElement('p');
+        p.innerHTML = `
+        <div class = "bg-blue-300 p-2 rounded mb-1">
+            <h4 class="text-xl font-bold">Bonus Amount</h4>
+            <p>10% GBP Bonus Added. New Balance ${newBalance}</p>
+        </div>
+        `;
+
+        // should be a common function
+        document.getElementById('transaction-section').appendChild(p);
     }
     else{
         alert('wrong pin or code');

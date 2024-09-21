@@ -5,7 +5,9 @@ document.getElementById('btn-add-money')
     const addMoney = getInputValueById('input-add-money');
     const pin = getInputValueById('input-password-addMoney');
 
-    // if((nun))
+    if(isNaN(addMoney)){
+        alert('failed to add money');
+    }
     if(pin === 123){
         const balance = getTextFieldValueById('account-balance');
         const newBalance = addMoney + balance;
@@ -13,7 +15,12 @@ document.getElementById('btn-add-money')
 
         // add to transaction history
         const p = document.createElement('p');
-        p.innerText = `Added : ${addMoney} GBP. Balance : ${newBalance}`;
+        p.innerHTML = `
+        <div class = "bg-purple-300 p-2 rounded mb-1">
+            <h4 class="text-xl font-bold">Add Money</h4>
+            <p>${addMoney} GBP. New Balance ${newBalance}</p>
+        </div>
+        `;
 
         // should be a common function
         document.getElementById('transaction-section').appendChild(p);
