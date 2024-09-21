@@ -1,22 +1,180 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/3021eab986.js" crossorigin="anonymous"></script>
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <main class="flex mx-auto mt-20">
+    <main class="flex mx-auto">
+        <!-- phone -->
         <div class="mockup-phone border-primary">
             <div class="camera"></div>
             <div class="display">
-              <div class="artboard artboard-demo phone-4">Hi.</div>
+                <div class="artboard artboard-demo phone-3">
+                    <!-- stat -->
+                    <div class="stats shadow">
+                        <div class="stat">
+                            <div id="account-balance" class="stat-value text-center text-blue-600">7500</div>
+                            <div class="stat-desc text-xl text-black">Available amount to spend</div>
+                        </div>
+                    </div>
+                    <!-- stat -->
+                    <!-- divider -->
+                    <div class="divider"></div>
+                    <!-- divider -->
+                    <!-- features -->
+                    <div class="space-y-2 ms-3">
+                        <button id="show-add-money-form" class="btn">Add Money</button>
+                        <button id="show-cash-out-form" class="btn">Cash out</button>
+                        <button id="show-transfer-form" class="btn">Transfer</button>
+                        <button id="show-bonus-form" class="btn">Get Bonus</button>
+                        <button id="show-transaction-form" class="btn">Transaction</button>
+                    </div>
+                    <!-- features -->
+                    <!-- divider -->
+                    <div class="divider"></div>
+                    <!-- divider -->
+                    <!--add money form -->
+                    <div id="add-money-section" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Add Money</span>
+                                </label>
+                                <input id="input-add-money" type="text" placeholder="Enter the amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Enter your Pin</span>
+                                </label>
+                                <input id="input-password-addMoney" type="password" placeholder="Enter the pin"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn-add-money" class="btn btn-primary">Add Money</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!--add money form -->
+                    <!--Cash out form -->
+                    <div id="cashout-section" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Cash out Amount</span>
+                                </label>
+                                <input id="input-cash-out" type="text" placeholder="Enter the amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Enter your Pin</span>
+                                </label>
+                                <input id="input-password-cashOut" type="password" placeholder="Enter the pin"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn-cash-out" class="btn btn-primary">Cash out</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!--cash out form -->
+                    <!--transfer form -->
+                    <div id="transfer-section" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Transfer Amount</span>
+                                </label>
+                                <input id="input-transfer" type="text" placeholder="Enter the amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Enter Account Number</span>
+                                </label>
+                                <input id="input-transfer-account-number" type="text" placeholder="Enter Account Number"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Enter your Pin</span>
+                                </label>
+                                <input id="input-pin-transfer" type="password" placeholder="Enter the pin"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn-transfer" class="btn btn-primary">Transfer</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!--transfer form -->
+                    <!--get Bonus form -->
+                    <div id="get-bonus-section" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <h2 class="text-center text-xl pt-2 text-blue-700 font-bold">Write "102024" to <br> get 10% on your account</h2>
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Bonus Code</span>
+                                </label>
+                                <input id="input-bonus" type="text" placeholder="Enter the amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Enter your Pin</span>
+                                </label>
+                                <input id="input-pin-bonus" type="password" placeholder="Enter the pin"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn-bonus" class="btn btn-primary">Get the bonus</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!--get Bonus form -->
+                    <!-- transaction start -->
+                    <div id="transaction-section">
+                        <h2 class="text-4xl text-center">Transaction History</h2>
+                    </div>
+                    <!-- transaction end -->
+                </div>
             </div>
-          </div>
+        </div>
+        <!-- phone -->
     </main>
+
+
+
+    <script src="Javascript-File/utilities.js"></script>
+    <script src="Javascript-File/addMoney.js"></script>
+    <script src="Javascript-File/cashout.js"></script>
+    <script src="Javascript-File/transfer.js"></script>
+    <script src="Javascript-File/getBonus.js"></script>
+    <script src="Javascript-File/features.js"></script>
 </body>
+
 </html>
+
+
+
+
+
+<!-- <div class="text-center space-y-3 space-x-1">
+    <button class="btn btn-lg w-2/6">Add Money</button>
+    <button class="btn btn-lg w-2/6">Cash Out</button>
+    <button class="btn btn-lg w-2/6">Transfer</button>
+    <button class="btn btn-lg w-2/6">Bills</button>
+    <button class="btn btn-lg w-2/6">Bonus</button>
+    <button class="btn btn-lg w-2/6">Transaction</button>
+</div> -->
